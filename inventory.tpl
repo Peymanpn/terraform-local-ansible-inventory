@@ -4,4 +4,7 @@
 %{ for ip in ips ~}
 ${ip}
 %{ endfor ~}
+
+[${name}:vars]
+ansible_python_interpreter=/usr/bin/python3
 %{ endfor ~}

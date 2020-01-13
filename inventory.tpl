@@ -5,6 +5,8 @@
 ${ip}
 %{ endfor ~}
 
-[${name}:vars]
-ansible_python_interpreter=/usr/bin/python3
 %{ endfor ~}
+
+[all:vars]
+hostname=${hostname}
+ansible_python_interpreter=/usr/bin/python3

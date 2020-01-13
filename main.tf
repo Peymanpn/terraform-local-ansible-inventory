@@ -1,5 +1,5 @@
 resource "local_file" "inventory" {
-  content  = templatefile("${path.module}/inventory.tpl", { servers = var.servers })
+  content  = templatefile("${path.module}/inventory.tpl", { servers = var.servers, hostname = var.hostname })
   filename = "${var.output}/hosts"
 }
 

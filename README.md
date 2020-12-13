@@ -14,8 +14,8 @@ provider "local" {
 module "inventory_production" {
   source  = "gendall/ansible-inventory/local"
   servers = {     
-    manager = ["1.2.3.4"]
-    worker = ["11.22.33.44", "55.66.77.88"]
+    manager = list(my_provider_server.manager) # for a single server
+    worker = my_provider_server.worker_nodes   # for a list of managers 
   }
   secrets = {
     tls_key  = "-----BEGIN RSA PRIVATE KEY----- MIIEow..."

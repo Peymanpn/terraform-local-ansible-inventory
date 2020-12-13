@@ -2,7 +2,7 @@
 [${name}]
 
 %{ for ip in ips ~}
-${ip}
+${ip.ipv4_address}
 %{ endfor ~}
 
 %{ endfor ~}

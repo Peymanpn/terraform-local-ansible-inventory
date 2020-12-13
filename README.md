@@ -12,8 +12,8 @@ provider "local" {
 }
 
 module "inventory_production" {
-  source  = "gendall/ansible-inventory/local"
-  servers = {     
+  source  = "Peymanpn/ansible-inventory/local"
+  servers = {
     manager = list(my_provider_server.manager) # for a single server
     worker = my_provider_server.worker_nodes   # for a list of managers 
   }
@@ -25,6 +25,6 @@ module "inventory_production" {
 }
 ```
 
-## Deployment
+## Module
 
-This role will be automatically built and deployed to [Terraform Registry](https://registry.terraform.io/modules/gendall) when a [Semver](https://semver.org) tag is pushed to the repo.
+Main Terraform registry this code is forked from: [Terraform Registry](https://registry.terraform.io/modules/gendall)

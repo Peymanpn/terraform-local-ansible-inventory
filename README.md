@@ -4,6 +4,8 @@ A Terraform module that will render groups of server IP addresses into an Ansibl
 
 The module will also take arbitrary secrets (certificates, tokens, keys, etc.) and write them to files in a subdirectory of the output path.
 
+it will create a `[all]` as first item in the inventory
+
 ## Usage
 
 ```hcl

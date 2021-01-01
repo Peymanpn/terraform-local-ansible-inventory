@@ -25,6 +25,12 @@ module "inventory_production" {
 }
 ```
 
+## ChangeLog
+
+### 0.4.1
+
+it will create a `[all]` list beside the server - ip map
+
 ## Module
 
 Main Terraform registry this code is forked from: [Terraform Registry](https://registry.terraform.io/modules/gendall)

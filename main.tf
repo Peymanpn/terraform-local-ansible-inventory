@@ -7,5 +7,5 @@ resource "local_file" "secrets" {
   for_each = var.secrets
 
   sensitive_content = each.value
-  filename = "${var.output}/secrets/${each.key}"
+  filename          = "${var.output}/secrets/${each.key}"
 }

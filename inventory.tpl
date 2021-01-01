@@ -1,10 +1,16 @@
+[all]
 %{ for name, ips in servers ~}
-[${name}]
-
 %{ for ip in ips ~}
-${ip.ipv4_address}
+${ip}
 %{ endfor ~}
+%{endfor ~}
 
+%{ for name, ips in servers ~}
+
+[${name}]
+%{ for ip in ips ~}
+${ip}
+%{ endfor ~}
 %{ endfor ~}
 
 [all:vars]
